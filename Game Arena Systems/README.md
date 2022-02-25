@@ -10,7 +10,7 @@ Explanatory systems for the Mancala game -
 
 Explanatory systems for Defense of the Ancients (DotA) -
 
-A brief about this game - it is a massive multiparticipant game with over 503360 branch out choices per game state node. And that is nowhere near deterministic due to variability in opponent and team player behaviour, as well as varibility caused by the AI in the game itself. This repository aims to convey valuable auto-generated proof-driven information that assists players in their game dilemmas and helps them showcase their best work. 
+A brief about this game - it is a massive multiparticipant game with over 503360 branch out choices per game state node. And that is nowhere near deterministic due to variability in opponent and team player behaviour, as well as variability caused by the AI in the game itself. This repository aims to convey valuable auto-generated proof-driven information that assists players in their game dilemmas and helps them showcase their best work. 
 
 1. Explainable and Better Algorithms for Team Gameplay Modeling (Literature Survey)
 2. Explainable Strategy Driver (Code that brings the game to the AI and constructs explanations in real-time)
