@@ -1,5 +1,5 @@
 
-**THIS COLLECTION CAN BE ACCESSED VIA THE FOLLWOING LINKS - **
+**THIS COLLECTION CAN BE ACCESSED VIA THE FOLLOWING LINKS - 
 
 1. For Analytical Demonstrations - https://github.com/kalpanabaheti/Analytical-Methods-Demonstrations
 2. For Software and Systems Development - https://github.com/kalpanabaheti/Automation-Systems-Design---For-an-orphanage
