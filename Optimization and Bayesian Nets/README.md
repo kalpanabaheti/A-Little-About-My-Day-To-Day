@@ -1,4 +1,4 @@
-**CONTENTS - **
+**CONTENTS -**
 
 **Bayesian Nets**
 
