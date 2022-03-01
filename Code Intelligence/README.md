@@ -1,5 +1,5 @@
 
-CODE INTELLIGENCE 
+**CODE INTELLIGENCE**
 
 All research work in code intelligence can be divided into two categories - 
 
