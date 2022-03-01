@@ -11,7 +11,7 @@ I realized one thing along the way - each thinker will try to solve problems in 
 💫 *Efficiency Attempt* - Once I found out that such a number existed, and it's quite close to the top, greater than 9800000000, I tried to maximize the consecutive trail starting from the left 
 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 - 𝟬.𝟬𝟬𝟰 𝘀𝗲𝗰𝗼𝗻𝗱𝘀
 
-And the last is a really good solutions to stop with as a coder.
+And the last is a really good solution to stop with as a coder.
 But these attempts made me wonder, maybe we don't need to test combinations AT ALL, if we could derive it through numerical properties. And so posted here is the attempt where -
 
 ~ 𝘐 𝘥𝘰𝘯'𝘵 𝘬𝘯𝘰𝘸 𝘪𝘧 𝘴𝘶𝘤𝘩 𝘢 𝘯𝘶𝘮𝘣𝘦𝘳 𝘦𝘷𝘦𝘯 𝘦𝘹𝘪𝘴𝘵𝘴 𝘵𝘰 𝘣𝘦𝘨𝘪𝘯 𝘸𝘪𝘵𝘩...
