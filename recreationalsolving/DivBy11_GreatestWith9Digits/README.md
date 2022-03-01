@@ -15,7 +15,9 @@ And the last is a really good solutions to stop with as a coder.
 But these attempts made me wonder, maybe we don't need to test combinations AT ALL, if we could derive it through numerical properties. And so posted here is the attempt where -
 
 ~ 𝘐 𝘥𝘰𝘯'𝘵 𝘬𝘯𝘰𝘸 𝘪𝘧 𝘴𝘶𝘤𝘩 𝘢 𝘯𝘶𝘮𝘣𝘦𝘳 𝘦𝘷𝘦𝘯 𝘦𝘹𝘪𝘴𝘵𝘴 𝘵𝘰 𝘣𝘦𝘨𝘪𝘯 𝘸𝘪𝘵𝘩...
+
 ~ 𝘐𝘧 𝘪𝘵 𝘥𝘰𝘦𝘴 𝘦𝘹𝘪𝘴𝘵, 𝘸𝘩𝘢𝘵 𝘪𝘴 𝘵𝘩𝘦 𝘣𝘢𝘭𝘭𝘱𝘢𝘳𝘬 𝘰𝘧 𝘵𝘩𝘪𝘴 𝘯𝘶𝘮𝘣𝘦𝘳...
+
 ~ 𝘋𝘰 𝘐 𝘯𝘦𝘦𝘥 𝘢𝘯𝘺 𝘱𝘦𝘳𝘮𝘶𝘵𝘢𝘵𝘪𝘰𝘯𝘴 𝘢𝘵 𝘢𝘭𝘭 𝘵𝘰 𝘨𝘦𝘵 𝘵𝘰 𝘵𝘩𝘪𝘴 𝘯𝘶𝘮𝘣𝘦𝘳?
 
 *A New Perspective* - In this last attempt, I've tried to reduce around 3265920 cases to 4 cases. It uses 7 observations extrapolated for our case - from common sense and 3 underlying established characteristics of numbers.
