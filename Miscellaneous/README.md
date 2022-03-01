@@ -9,4 +9,4 @@
 
 **ONGOING WORK -**
 
-Upcoming is my feature for explainability in natural language regarding how a random forest algorithm reaches it's solution and what each decision made at intermediate stages mean in terms of a domain. 
+Upcoming is my feature for explainability regarding how a random forest algorithm reaches it's solution, auto-graphing and validating causal relationships, and what each decision made at intermediate stages means in terms of a domain. 
