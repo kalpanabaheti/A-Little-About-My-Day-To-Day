@@ -1,7 +1,7 @@
 
-SEARCHES
+**SEARCHES**
 
-There are five baseline searches covered in this section, followed by a description of current research. 
+There are five baseline searches covered in this section, followed by a description of the direction of my current research work. 
 
 1. Uniform Cost Search and Breadth-First Search - 
 
