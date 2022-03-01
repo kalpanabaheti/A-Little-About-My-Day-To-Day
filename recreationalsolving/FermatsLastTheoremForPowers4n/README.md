@@ -1,4 +1,4 @@
-Fermat's Last Theorem - 
+**Fermat's Last Theorem -**
 
 Fermat’s Last Theorem is called so because the math genius promised he knew of an elegant proof for x^n + y^n = z^n having no integer solutions for n>2...
 Shortly after that he died, without writing the proof down, making this theorem one of the most deliciously fanciable puzzles in all of pure math history.
