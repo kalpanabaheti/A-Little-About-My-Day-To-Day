@@ -1,4 +1,4 @@
-**This is a generalized system to solve problems like the ones below with m slots, n items, and k constraints**
+**This is a generalized system to solve problems like the one below with m slots, n items, and k constraints**
 
 The inspiration - Messr Baker, Dyer, Farmer, Glover, and Hosier are seated around a circular
 table, playing poker. Each gentleman is the namesake of the profession
