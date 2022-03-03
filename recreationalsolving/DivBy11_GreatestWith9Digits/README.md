@@ -20,7 +20,7 @@ But these attempts made me wonder, maybe we don't need to test combinations AT A
 
 ~ 𝘋𝘰 𝘐 𝘯𝘦𝘦𝘥 𝘢𝘯𝘺 𝘱𝘦𝘳𝘮𝘶𝘵𝘢𝘵𝘪𝘰𝘯𝘴 𝘢𝘵 𝘢𝘭𝘭 𝘵𝘰 𝘨𝘦𝘵 𝘵𝘰 𝘵𝘩𝘪𝘴 𝘯𝘶𝘮𝘣𝘦𝘳?
 
-*A New Perspective* - In this last attempt, I've tried to reduce around 3265920 cases to 4 cases. It uses 7 observations extrapolated for our case - from common sense and 3 underlying established characteristics of numbers.
+*A New Perspective* - In this last attempt, I've tried to reduce 3265920 cases to 4 cases. It uses 7 observations extrapolated for our case - from common sense and 3 underlying established characteristics of numbers.
 
 And while a coder could say that running combinations is easier for us, this attempt shows me that a system (deterministic or probabilistic) that can solve by proof and reasoned deduction and induction, rather than trial and error, may be more dependable and rewarding in the long run...
 
