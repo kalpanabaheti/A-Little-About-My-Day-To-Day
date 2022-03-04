@@ -14,6 +14,6 @@ A brief about this game - it is a massive multiparticipant game with over 503360
 
 1. Explainable and Better Algorithms for Team Gameplay Modeling (Literature Survey)
 2. Explainable Strategy Driver (Code that brings the game to the AI and constructs explanations in real-time)
-3. Core Strategy - Diagnostic and Prescriptive Functionality (Code for capturing signature game states and buidling game map for feedback) - This is an extendable file. The original research covered all major strategies, while this covers three basic ones - the pull, the stack, and the farm.
+3. Core Strategy - Diagnostic and Prescriptive Functionality (Code for capturing signature game states and building game map for feedback) - This is an extendable file. The original research covered all major strategies, while this covers three basic ones - the pull, the stack, and the farm.
 4. Feedback Framework - The code framework for dynamically constructing grammatically correct and effective summaries of "why and how to improve" personalized for the player.
 
