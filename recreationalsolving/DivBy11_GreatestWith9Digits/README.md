@@ -3,7 +3,7 @@
 
 𝐖𝐡𝐚𝐭 𝐢𝐬 𝐭𝐡𝐞 𝐥𝐚𝐫𝐠𝐞𝐬𝐭 𝐧𝐮𝐦𝐛𝐞𝐫 𝐝𝐢𝐯𝐢𝐬𝐢𝐛𝐥𝐞 𝐛𝐲 𝟏𝟏, 𝐜𝐨𝐦𝐩𝐫𝐢𝐬𝐞𝐝 𝐨𝐟 𝐝𝐢𝐠𝐢𝐭𝐬 𝟎 𝐭𝐨 𝟗, 𝐰𝐡𝐞𝐫𝐞 𝐞𝐚𝐜𝐡 𝐝𝐢𝐠𝐢𝐭 𝐚𝐩𝐩𝐞𝐚𝐫𝐬 𝐞𝐱𝐚𝐜𝐭𝐥𝐲 𝐨𝐧𝐜𝐞?
 
-I realized one thing along the way - each thinker will try to solve problems in their own context, and the more contexts you can imagine, the more likely you are to keep it elegant. So here we go -
+I've realized one thing along the way - each thinker will try to solve problems in their own context, and the more contexts you can imagine, the more likely you are to keep it elegant. So here we go -
 
 💫 *Exploratory Attempt* - While there are more multiples of 11 than permutations of digits from 0 to 9 before 10 to the power 10, permutations still have a reputation of exploding with scale up of digits. So my first attempt was to determine if such a number exists, and a ballpark of where such a number could be 
 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 - 𝟬.𝟬𝟭𝟮 𝘀𝗲𝗰𝗼𝗻𝗱𝘀
