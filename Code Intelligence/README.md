@@ -1,7 +1,7 @@
 
 **CODE INTELLIGENCE**
 
-All research work in code intelligence can be divided into two categories - 
+All my research work in code intelligence can be divided into two categories - 
 
 1. Syntax associated 
 2. Generated data associated
