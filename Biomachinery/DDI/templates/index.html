@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</head>
+<body>
+
+<h1>Drug Recommender by Side Effect Minimization</h1>
+
+<div class="selection">
+    <label for="diseases">
+    Select diseases:
+
+        <select class="js-disease" multiple="multiple" style="width: 25%" id="diseases"></select>
+    </label>
+</div>
+
+<div class="selection">
+    <label for="drugs">
+    Select drugs:
+        <select class="js-drugs" multiple="multiple" style="width: 25%" id="drugs">
+        </select>
+    </label>
+</div>
+
+<button id="calculate">Click to Run</button>
+<button id="table">Display Data</button>
+
+
+<div id="results">
+<h3> Results: </h3>
+<div id="container" style="max-width:40%;display:inline-block;vertical-align:top"></div>
+<canvas id="graphs" style="max-width:50%;display:inline-block;vertical-align:top;max-height:400px "><img
+        src="../../../../Desktop/Screenshot 2023-04-22 at 5.28.50 PM.png" height="780" width="1105"/></canvas>
+</div>
+
+
+</body>
+</html>
+
