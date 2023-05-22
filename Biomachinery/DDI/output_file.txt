@@ -1,0 +1,10 @@
+112965-21-6,RANOLAZINE,agitated,0.5
+112965-21-6,Protivar,Back Ache,0.49
+112965-21-6,Valdecoxib,Back Ache,0.52
+112965-21-6,Rifampicin,agitated,0.5
+RANOLAZINE,Protivar,lung edema,0.5
+RANOLAZINE,Valdecoxib,atelectasis,0.51
+RANOLAZINE,Rifampicin,agitated,0.51
+Protivar,Valdecoxib,atelectasis,0.53
+Protivar,Rifampicin,Back Ache,0.53
+Valdecoxib,Rifampicin,atelectasis,0.53
