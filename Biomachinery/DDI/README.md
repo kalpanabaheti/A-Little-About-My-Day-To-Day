@@ -41,4 +41,4 @@ test_charges.csv: **https://drive.google.com/file/d/1caad2O8zIILPD72qtf4zu970Lms
 Open VSCode or Terminal, run main.py. A URL will be displayed, click on that URL to go to the webpage. Select diseases and drugs. Then click the 'Click to Run' button, then when the 'Display Data' button appears, click on that to view results. 
 
 
-# DEMO VIDEO - **https://youtu.be/L93voZ2VOgU**
+# DEMO VIDEO - **https://drive.google.com/file/d/1QPVrstXvgNac7SgU6WyV5ieGnHbJ4OZF/view?usp=sharing**
