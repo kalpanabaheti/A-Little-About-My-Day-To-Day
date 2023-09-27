@@ -3,8 +3,8 @@
 
 All my research work in code intelligence can be divided into two categories - 
 
-1. Syntax associated 
-2. Generated data associated
+1. Syntax study 
+2. Intermediately generated data points study
 
 In this repository, only the latter is present (former belongs to company product). 
 The Navigation.py file acts as a control board for - 
