@@ -18,4 +18,4 @@ The Navigation.py file acts as a control board for -
 ~ And offering choices to the user to search for signature markers.
 
 These signatures give direct information on where exactly is a specific manipulation occuring, what the consequences are and to some extent - why as well.
-This is a novel advance in the field of teaching code to learners, as well detecting algorithmic bias, and being accountable for a software's decsions.
+This is a novel advance in the field of teaching code to learners, as well detecting algorithmic bias, and being accountable for a software's decisions.
