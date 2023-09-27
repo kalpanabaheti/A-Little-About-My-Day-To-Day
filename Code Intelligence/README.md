@@ -1,5 +1,5 @@
 
-**CODE INTELLIGENCE**
+## CODE INTELLIGENCE
 
 All my research work in code intelligence can be divided into two categories - 
 
@@ -7,7 +7,7 @@ All my research work in code intelligence can be divided into two categories -
 2. Intermediately generated data points study
 
 In this repository, only the latter is present (former belongs to company product). 
-The Navigation.py file acts as a control board for - 
+The **Navigation.py** file acts as a final control board for - 
 
 ~ A set of a large number of submissions to a single problem.
 
