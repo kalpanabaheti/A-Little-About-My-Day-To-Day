@@ -23,7 +23,7 @@ A game teaching bot for Mancala - an African game (paper draft included).
 
 ## HCI Design Endeavour
 
-Human Computer Interaction - Design, and user research for two products mock-prototyped over a six month period.
+Human Computer Interaction - Design and user research for two products (one novel, and one an improvement over an already existing product) documented and mock-prototyped over a six month period. This project was carried out under a specialised track at Georgia Tech - School of Interactive Intelligence and Computing.
 
 ## Recreational Solving
 
