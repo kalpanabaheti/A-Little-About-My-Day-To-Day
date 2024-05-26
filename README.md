@@ -21,6 +21,10 @@ Strategy extraction and feedback formulation - basic approach.
 A game teaching bot for Mancala - an African game (paper draft included).
 (Further innovation at Ericsson, India)
 
+## HCI Design Endeavour
+
+Human Computer Interaction - Design, and user research for two products mock-prototyped over a six month period.
+
 ## Recreational Solving
 
 Problem solving for fun...
