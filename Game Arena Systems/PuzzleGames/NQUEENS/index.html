@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Crown Game</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('gradient3.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .gif-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.35);  /*Optional: darkens the background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999; /* Ensures it's on top of other elements */
+        }
+
+        .winning-gif {
+            width: 350px;  /* Adjust the size of the GIF */
+            height: auto;
+        }
+        .fade-out {
+            opacity: 0; /* Fully transparent (faded out) */
+        }
+
+        #gameContainer {
+            text-align: center;
+        }
+        #gameBoard {
+            display: grid;
+            gap: 3px;
+            margin: 20px auto;
+            /*width: 600px;  Increased from 400px (1.5 times larger) */
+            /*height: 600px;  Increased from 400px (1.5 times larger) */
+            max-width: 1000px;
+            max-height: 1000px;
+            background-color: black;
+            border: 3px solid black;
+        }
+        .cell {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+        .cell:hover {
+            transform: scale(1.05);
+        }
+        /* Crown image - larger size */
+        .cell img.crown-icon {
+            width: 80%;  /* Adjust crown size */
+            height: 80%;
+            object-fit: contain; /* Preserve aspect ratio */
+        }
+
+        /* Cross image - smaller size */
+        .cell img.cross-icon {
+            width: 20%;  /* Smaller size for cross */
+            height: 20%;
+            object-fit: contain;
+        }
+
+        #startButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <button id="startButton">Start New Game</button>
+        <div id="gameBoard"></div>
+    </div>
+
+    <script>
+        // Game state
+        let gameBoard = [];
+        let size = 0;
+        let colorGroups = {};
+
+        // Function to initialize the game
+        function initGame(colorTuples) {
+            size = Math.sqrt(colorTuples.length);
+            gameBoard = [];
+            
+            for (let i = 0; i < size; i++) {
+                let row = [];
+                for (let j = 0; j < size; j++) {
+                    const index = i * size + j;
+                    const [r, g, b] = colorTuples[index];
+                    row.push({ color: `rgb(${r},${g},${b})`, state: 'empty' });
+                }
+                gameBoard.push(row);
+            }
+            
+            // Initialize color groups
+            colorGroups = {};
+            for (let i = 0; i < size; i++) {
+                for (let j = 0; j < size; j++) {
+                    const color = gameBoard[i][j].color;
+                    if (!colorGroups[color]) colorGroups[color] = [];
+                    colorGroups[color].push({row: i, col: j});
+                }
+            }
+            
+            renderBoard();
+        }
+  
+
+        // Function to render the game board
+        function renderBoard() {
+            const boardElement = document.getElementById('gameBoard');
+            boardElement.innerHTML = '';
+            boardElement.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+            
+            for (let i = 0; i < size; i++) {
+                for (let j = 0; j < size; j++) {
+                    const cell = gameBoard[i][j];
+                    const cellElement = document.createElement('div');
+                    cellElement.className = 'cell';
+                    cellElement.style.backgroundColor = cell.color;
+                    
+                    if (cell.state === 'crown') {
+                        const imgElement = document.createElement('img');
+                        imgElement.src = 'queen.png'; // Replace with actual path
+                        imgElement.className = 'crown-icon'; // Assign crown-specific class
+                        cellElement.appendChild(imgElement);
+                    } else if (cell.state === 'cross') {
+                        const imgElement = document.createElement('img');
+                        imgElement.src = 'cross.png'; // Replace with actual path
+                        imgElement.className = 'cross-icon'; // Assign cross-specific class
+                        cellElement.appendChild(imgElement);
+                    }
+                    
+                    cellElement.onclick = () => handleCellClick(i, j);
+                    boardElement.appendChild(cellElement);
+                }
+            }
+        }
+
+        // Function to handle cell clicks
+        function handleCellClick(row, col) {
+            const cell = gameBoard[row][col];
+            
+            if (cell.state === 'empty') {
+                placeCrown(row, col);
+            } else if (cell.state === 'crown') {
+                removeCrown(row, col);
+            }
+            
+            renderBoard();
+            checkWinCondition();
+        }
+
+        // Function to place a crown
+        function placeCrown(row, col) {
+            gameBoard[row][col].state = 'crown';
+            placeCrosses(row, col);
+        }
+
+        // Function to place crosses
+        function placeCrosses(crownRow, crownCol) {
+            const color = gameBoard[crownRow][crownCol].color;
+            
+            // Place crosses in the same row and column
+            for (let i = 0; i < size; i++) {
+                if (i !== crownCol) gameBoard[crownRow][i].state = 'cross';
+                if (i !== crownRow) gameBoard[i][crownCol].state = 'cross';
+            }
+            
+            // Place crosses in surrounding cells
+            for (let i = -1; i <= 1; i++) {
+                for (let j = -1; j <= 1; j++) {
+                    const newRow = crownRow + i;
+                    const newCol = crownCol + j;
+                    if (newRow >= 0 && newRow < size && newCol >= 0 && newCol < size) {
+                        if (gameBoard[newRow][newCol].state === 'empty') {
+                            gameBoard[newRow][newCol].state = 'cross';
+                        }
+                    }
+                }
+            }
+            
+            // Place crosses in same color cells
+            colorGroups[color].forEach(({row, col}) => {
+                if (gameBoard[row][col].state === 'empty') {
+                    gameBoard[row][col].state = 'cross';
+                }
+            });
+        }
+
+        // Function to remove a crown
+        function removeCrown(row, col) {
+            gameBoard[row][col].state = 'empty';
+            removeCrosses(row, col);
+        }
+
+        // Function to remove crosses
+        function removeCrosses(crownRow, crownCol) {
+            const color = gameBoard[crownRow][crownCol].color;
+            
+            for (let i = 0; i < size; i++) {
+                for (let j = 0; j < size; j++) {
+                    if (gameBoard[i][j].state === 'cross') {
+                        if (!isCrossAssociatedWithOtherCrown(i, j, crownRow, crownCol)) {
+                            gameBoard[i][j].state = 'empty';
+                        }
+                    }
+                }
+            }
+        }
+
+        // Function to check if a cross is associated with another crown
+        function isCrossAssociatedWithOtherCrown(row, col, excludeRow, excludeCol) {
+            const color = gameBoard[row][col].color;
+            
+            // Check row and column
+            for (let i = 0; i < size; i++) {
+                if (i !== excludeCol && gameBoard[row][i].state === 'crown') return true;
+                if (i !== excludeRow && gameBoard[i][col].state === 'crown') return true;
+            }
+            
+            // Check surrounding cells
+            for (let i = -1; i <= 1; i++) {
+                for (let j = -1; j <= 1; j++) {
+                    const newRow = row + i;
+                    const newCol = col + j;
+                    if (newRow >= 0 && newRow < size && newCol >= 0 && newCol < size) {
+                        if ((newRow !== excludeRow || newCol !== excludeCol) && gameBoard[newRow][newCol].state === 'crown') {
+                            return true;
+                        }
+                    }
+                }
+            }
+            
+            // Check same color cells
+            return colorGroups[color].some(({row: r, col: c}) => 
+                (r !== excludeRow || c !== excludeCol) && gameBoard[r][c].state === 'crown'
+            );
+        }
+
+        // Function to show a centered GIF
+        function showWinningGif() {
+            // Create the overlay div
+            const overlay = document.createElement('div');
+            overlay.className = 'gif-overlay';
+
+            // Create the image element
+            const gifElement = document.createElement('img');
+            gifElement.src = 'crown_spin.gif'; // Replace with the actual path to your GIF file
+            gifElement.className = 'winning-gif';
+
+            // Append the GIF to the overlay
+            overlay.appendChild(gifElement);
+
+            // Append the overlay to the body
+            document.body.appendChild(overlay);
+
+            // Optionally, hide the GIF after a few seconds (e.g., 3 seconds)
+            /*setTimeout(() => {
+                overlay.remove();
+            }, 10000); // Adjust the duration as needed*/
+        }
+
+        // Function to check win condition
+        function checkWinCondition() {
+            // Check rows and columns
+            for (let i = 0; i < size; i++) {
+                let rowCrown = 0, colCrown = 0;
+                for (let j = 0; j < size; j++) {
+                    if (gameBoard[i][j].state === 'crown') rowCrown++;
+                    if (gameBoard[j][i].state === 'crown') colCrown++;
+                }
+                if (rowCrown !== 1 || colCrown !== 1) return false;
+            }
+            
+            // Check color blocks
+            for (const color in colorGroups) {
+                let crownCount = 0;
+                colorGroups[color].forEach(({row, col}) => {
+                    if (gameBoard[row][col].state === 'crown') crownCount++;
+                });
+                if (crownCount !== 1) return false;
+            }
+            
+            showWinningGif();
+            return true;
+        }
+
+        
+        // Function to start a new game
+       
+        // Function to start a new game
+        function startNewGame() {
+            $.ajax({
+                url: 'http://127.0.0.1:5000/get_colors',
+                type: 'GET',
+                dataType: 'json',
+                success: function(colorTuples) {
+                    initGame(colorTuples);
+                },
+                error: function(xhr, status, error) {
+                    console.error("Failed to fetch color data:", error);
+                    alert("Failed to start the game. Please try again.");
+                }
+            });
+        }
+
+        // Event listener for the start button
+        document.getElementById('startButton').addEventListener('click', startNewGame);
+
+        // Start the game when the page loads
+        startNewGame();
+    </script>
+</body>
+</html>
