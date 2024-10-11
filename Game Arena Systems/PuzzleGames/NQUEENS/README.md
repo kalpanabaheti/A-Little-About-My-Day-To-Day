@@ -13,7 +13,7 @@ On command line...
 8) Check the URL listed, and if it's different on index.html (run an .http search to locate the code line), replace the listed URL on the .html file with the one mentioned on command line.
 9) Open index.html and enjoy!
 
-##RULES 
+## RULES 
 
 > One queen per column.
 > One queen per row.
