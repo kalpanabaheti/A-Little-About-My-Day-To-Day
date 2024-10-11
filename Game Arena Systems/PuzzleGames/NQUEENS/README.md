@@ -18,7 +18,7 @@ On command line...
 > One queen per column.
 > One queen per row.
 > One queen per colour.
-> No more, no less than one per each.
+> No queen can be neighbours with another.
 
 Media...
 
