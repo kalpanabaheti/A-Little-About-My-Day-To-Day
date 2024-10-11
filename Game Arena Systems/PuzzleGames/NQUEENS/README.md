@@ -3,6 +3,7 @@
 
 1) Download the repository
 2) Ensure you have python 3.7 or above installed in your path
+
 On command line...
 3) Run *pip install pygame* 
 4) Run *pip install Flask* 
