@@ -1,7 +1,7 @@
 
 ## Instructions to install game - 
 
-1) Download the NQUEENS zip file and extract the repository from it.
+1) Download the NQUEENS zip file and extract the repository from it - https://drive.google.com/file/d/1cWME8CjSDE52gBJVZyrYgrNbpdYwH5fl/view?usp=sharing 
 
 2) Ensure you have python 3.7 or above installed in your path
 
