@@ -6,9 +6,11 @@
 I've realized one thing along the way - each thinker will try to solve problems in their own context, and the more contexts you can imagine, the more likely you are to keep it elegant. So here we go -
 
 💫 *Exploratory Attempt* - While there are more multiples of 11 than permutations of digits from 0 to 9 before 10 to the power 10, permutations still have a reputation of exploding with scale up of digits. So my first attempt was to determine if such a number exists, and a ballpark of where such a number could be 
+
 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 - 𝟬.𝟬𝟭𝟮 𝘀𝗲𝗰𝗼𝗻𝗱𝘀
 
 💫 *Efficiency Attempt* - Once I found out that such a number existed, and it's quite close to the top, greater than 9800000000, I tried to maximize the consecutive trail starting from the left 
+
 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 - 𝟬.𝟬𝟬𝟰 𝘀𝗲𝗰𝗼𝗻𝗱𝘀
 
 And the last is a really good solution to stop with as a coder.
