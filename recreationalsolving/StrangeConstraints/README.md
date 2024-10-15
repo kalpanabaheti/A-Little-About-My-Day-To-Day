@@ -10,4 +10,4 @@ The farmer is seated to the left of Mr Farmer.
 Mr Dyer is on the glover's right.
 What is the name of the dyer?
 
-The result - A generalized system for all such adhoc problems.
+The result - A generalized system for all such adhoc problems that are limited in m-value.
