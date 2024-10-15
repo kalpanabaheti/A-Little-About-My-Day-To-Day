@@ -1,18 +1,18 @@
 # DESCRIPTION - 
 
-The package is a webapp-based system that takes in a list of drugs from a dropdown menu, and displays a table of drug pairs from input drugs, with most probable side-effect associated with the pair. It also returns an interaction (trust) score for each drug-pair and graphs that. 
+This package is a webapp-based system that takes in a list of drugs from a dropdown menu, and displays a table of drug pairs from input drugs, with the most probable side-effect associated with the pair. It also returns an interaction (trust) score for each drug-pair and graphs that. 
 
-What happens on the backend when a list of drugs is sent is that the drugs are first reduced to distinct pairs of drugs, and each drug-pair is sent to two models - the side-effect prediction model and the interaction scoring model. They return the most probable side-effect and trust score respectively. 
+What happens on the backend when a list of drugs is sent is this - the drugs are first reduced to distinct pairs of drugs, and each drug-pair is sent to two models - the side-effect prediction model and the interaction scoring model. They return the most probable side-effect and trust score respectively. 
 
 The interaction scoring model is based on the pre-trained ChemBERTa transformer that takes in two SMILES-formatted drugs, featurises them for interaction, runs them through a sigmoid function to get a score between 0 and 1. The higher the score, the more serious the interaction.
 
-The side-effect prediction (restricted to 10 side-effects for PoC) is the major part of my research. It focuses on the sole contribution of structural similarity of drugs to competing for a binding spot on the human proteome, thus causing adverse effects - however this is only one contributor, but it is the center of my focus for this proof of concept and the aim to find the maximal possible inference extraction from a singular contributor. I decomposed drug-pairs from SMILES representation to spatially aware vector of residual atomic charges - this was arrived at through logical deduction towards adequate feature-granularity within constraints of my compute power. I then studied the relationship of the resultant feature vectors of each drug-pair with the side-effects, via sequential and graph neural networks after dimensionality reduction of features - and determine the most optimal model. I establish maximal inference from one contributor in this problem, usable for further in-depth research. 
+The side-effect prediction (restricted to 10 side-effects for this PoC) is the major part of my work. It focuses on the sole contribution of structural similarity of drugs that results in competing for a binding spot on the human proteome, thus causing adverse effects - this is only one contributor, however, owing to it's importance, it is the center of my focus for this proof of concept. The aim is to find the maximal possible inference extraction from this singular contributor. This approach decomposes drug-pairs from SMILES representation to spatially aware vectors of residual atomic charges - this method was arrived at through logical deduction by evaluating varied feature granularities and their performance. This approach is also constrained by limited available compute power. The work covers studying the relationship of the resultant feature vectors of each drug-pair with the side-effects, via sequential and graph neural networks after dimensionality reduction of features - to determine the most optimal model. We establish maximal inference from a single contributor in this problem, usable for further in-depth research. 
 
 
 # INSTALLATION - 
 
 1. Download the package. 
-2. To this package, download the test and train data - do not change their names. You can download the data from here - 
+2. Download the test and train data, and save it within this package - do not change their names. You can download the data from here - 
 
 train_charges.csv: **https://drive.google.com/file/d/1DgsMVxOaS4Wkzjpw3M2lB2Fzp3EjCbxz/view?usp=sharing**
 
